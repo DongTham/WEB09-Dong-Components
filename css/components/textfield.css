@@ -3,13 +3,43 @@ body {
     font: 500 14px Roboto-Medium;
 }
 
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    margin-top: 15px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
 .field input {
+    font: 400 14px Roboto-Regular;
     background-color: #FFFFFF;
     border: 1px solid #EBEBEB;
     border-radius: 4px;
     margin-top: 8px;
     padding: 0 8px 0 12px;
+    height: 36px;
+    width: 260px;
 }
+
+.field input:hover,
+input:hover~.btn-check,
+input:hover~.btn-verify,
+input:hover~.btn-search {
+    background-color: #F6F6F6;
+}
+
+
+/* .btn-check:hover,
+.btn-search:hover,
+.btn-verify:hover {
+    background-color: #F6F6F6;
+} */
 
 .field label {
     display: flex;
@@ -17,12 +47,87 @@ body {
     color: #1F1F1F;
 }
 
-.field-normal {
-    height: 36px;
-    padding: 0;
-}
-
-.field-normal::placeholder {
+.field input::placeholder {
     font: 400 14px Roboto-Regular;
     color: #9E9E9E;
+    line-height: 18px;
+}
+
+.btn-search {
+    position: absolute;
+    background-color: #FFFFFF;
+    color: #666666;
+    border-radius: 0 3px 3px 0;
+    font-size: 16px;
+    border: 0px solid #EBEBEB;
+    z-index: 2;
+    height: 34px;
+    width: 40px;
+    padding: 0;
+    top: calc(100% - 35px);
+    right: calc(100% - 259px);
+}
+
+.btn-search {
+    cursor: pointer;
+}
+
+.field-normal:focus,
+.field-valid:focus,
+.field-verify:focus,
+.field-action-search:focus {
+    outline: none;
+    border-color: #50B83C;
+}
+
+input.field-error {
+    border-color: #E61D1D;
+    margin-bottom: 8px;
+}
+
+.field-error:focus {
+    outline: none;
+}
+
+.field p {
+    margin: 0;
+    color: #E61D1D;
+    font-size: 12px;
+}
+
+input.field-readonly {
+    background-color: #EBEBEB;
+    border-color: #E0E0E0;
+    line-height: 11px;
+    color: #666666;
+}
+
+.field-readonly:focus {
+    outline: none;
+}
+
+input.field-valid,
+input.field-verify {
+    border-color: #50B83C;
+    color: #212121;
+}
+
+.btn-check,
+.btn-verify {
+    position: absolute;
+    color: #50B83C;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    border: unset;
+    z-index: 2;
+    top: calc(100% - 28px);
+    right: calc(100% - 259px);
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin-right: 8px;
+}
+
+.btn-search:focus {
+    background-color: #EBEBEB;
 }

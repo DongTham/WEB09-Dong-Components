@@ -1,6 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Roboto-Medium;
-    /* margin: 0; */
 }
 
 @font-face {

@@ -13,10 +13,41 @@
 <body>
     <div class="row">
         <div class="field">
-            <label for="">Field label
-                <input class="field-normal" type="text" placeholder="Place holder">
+            <label for="">1. Field label: Nomal + Hover + Focus</label>
+            <input class="field-normal" type="text" placeholder="Place holder">
+            <!-- <button class="btn btn-search">
                 <i class="icofont-search-1"></i>
-            </label>
+            </button> -->
+        </div>
+        <div class="field">
+            <label for="">2. Field label: Error</label>
+            <input class="field-error" type="text">
+            <p for="">&#60;Tên trường&#62; không được để trống</p>
+        </div>
+        <div class="field">
+            <label for="">3. Field label: Readonly</label>
+            <input class="field-readonly" type="text" value="misa.amis.vn" readonly="true">
+        </div>
+        <div class="field">
+            <label for="">4. Field label: Valid</label>
+            <input class="field-valid" type="text" value="misa.amis.vn">
+            <button class="btn-check">
+                <i class="icofont-check-circled"></i>
+            </button>
+        </div>
+        <div class="field">
+            <label for="">5. Field label: Verifying</label>
+            <input class="field-verify" type="text" value="misa.amis.vn">
+            <button class="btn-verify">
+                <i class="icofont-refresh"></i>
+            </button>
+        </div>
+        <div class="field">
+            <label for="">6. Field label: Textfield with action</label>
+            <input class="field-action-search" type="text" placeholder="Place holder">
+            <button class="btn btn-search">
+                <i class="icofont-search-1"></i>
+            </button>
         </div>
     </div>
 </body>
